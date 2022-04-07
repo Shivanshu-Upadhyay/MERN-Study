@@ -5,6 +5,17 @@
   padding: 10px;
 }
 
+.link2{
+  display: flex;
+  justify-content: end;
+  background-color: blueviolet;
+  padding: 10px;
+}
+
+ul{
+  list-style: none;
+}
+
 a{
   text-decoration: none;
   color: #fff;
@@ -36,3 +47,17 @@ button{
   cursor: pointer;
 }
 
+.a{
+  height: 400px;
+  overflow: auto;
+  background: gray;
+}
+.b{
+  height: 40px;
+  background-color: black;
+  
+}
+.c{
+  height: 60px;
+  overflow: auto;
+}

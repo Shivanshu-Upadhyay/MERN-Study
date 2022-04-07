@@ -9,20 +9,36 @@ function Nav() {
   };
   return (
     <>
-      <ul className="link">
-        <Link to="/">Product</Link>
-        <Link to="/Add">Add Product</Link>
-        <Link to="/Update">Update Product</Link>
-        <Link to="/Profile">Profile</Link>
-        {auth ? (
-          <Link to="/SignUp" onClick={logout}>
-            Logout
-          </Link>
-        ) : (
-          <Link to="/SignUp">SignUp</Link>
-        )}
-        <Link to="/login">LogIn</Link>
-      </ul>
+      {auth ? (
+        <ul className="link">
+          <li>
+            <Link to="/">Product</Link>
+          </li>
+          <li>
+            <Link to="/Add">Add Product</Link>
+          </li>
+          <li>
+            <Link to="/Update">Update Product</Link>
+          </li>
+          <li>
+            <Link to="/Profile">Profile</Link>
+          </li>
+          <li>
+            <Link to="/SignUp" onClick={logout}>
+              Logout <span style={{textTransform:"capitalize"}}> ({JSON.parse(auth).name})</span>
+            </Link>
+          </li>
+        </ul>
+      ) : (
+        <ul className=" link2">
+          <li style={{ marginRight: "2rem" }}>
+            <Link to="/SignUp">SignUp</Link>
+          </li>
+          <li>
+            <Link to="/login">LogIn</Link>
+          </li>
+        </ul>
+      )}
     </>
   );
 }

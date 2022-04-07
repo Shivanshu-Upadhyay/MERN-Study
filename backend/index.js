@@ -1,6 +1,7 @@
 import express, { json } from "express";
 import "./dbConnection/config.js";
 import students from "./dbConnection/user.js";
+import products from "./dbConnection/product.js";
 import cors from "cors";
 const app = express();
 app.use(express.json());
@@ -29,5 +30,14 @@ app.post("/login", async (req, res) => {
     res.send("No USER Found");
   }
 });
+
+app.post("/addProduct",async(req,res)=>{
+   let product = new products(req.body)
+   let result = await product.save();
+   res.send(result)
+})
+
+
+
 
 app.listen(8000);

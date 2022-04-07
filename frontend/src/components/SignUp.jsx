@@ -41,18 +41,21 @@ if(auth){
           placeholder="Name"
           value={name}
           onChange={(e) => setname(e.target.value)}
+          required
         />
         <input
           type="text"
           placeholder="Email"
           value={email}
           onChange={(e) => setemail(e.target.value)}
+          required
         />
         <input
           type="password"
           placeholder="Password"
           value={password}
           onChange={(e) => setpassword(e.target.value)}
+          required
         />
         <button type="buton" onClick={handleSubmit}>
           Submit
