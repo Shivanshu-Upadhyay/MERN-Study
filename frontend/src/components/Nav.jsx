@@ -17,9 +17,7 @@ function Nav() {
           <li>
             <Link to="/Add">Add Product</Link>
           </li>
-          <li>
-            <Link to="/Update">Update Product</Link>
-          </li>
+          
           <li>
             <Link to="/Profile">Profile</Link>
           </li>

@@ -47,6 +47,17 @@ button{
   cursor: pointer;
 }
 
+.button{
+  padding: 10px 20px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 13px;
+  border: none;
+  margin-inline: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
 .a{
   height: 400px;
   overflow: auto;
@@ -60,4 +71,22 @@ button{
 .c{
   height: 60px;
   overflow: auto;
+}
+
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
 }
